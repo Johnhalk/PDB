@@ -5,18 +5,20 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var index = require('./routes/index');
-var users = require('./routes/users');
-var palindromes = require('./routes/palindromes');
-
-var app = express();
-
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
 mongoose.connect('mongodb://localhost/product')
   .then(() =>  console.log('connection succesful'))
   .catch((err) => console.error(err));
+
+require("./models/palindrome");
+
+var index = require('./routes/index');
+var users = require('./routes/users');
+var palindromes = require('./routes/palindromes');
+
+var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

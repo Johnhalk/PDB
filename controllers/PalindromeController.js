@@ -1,9 +1,11 @@
 var mongoose = require('mongoose');
 var Palindrome = mongoose.model('Palindrome');
 
+
+var palindromeController = {};
 //Create palindrome
 palindromeController.create = function(req, res) {
-  res.render('../views/palindrome/create');
+  res.render('../views/palindromes/create');
 };
 
 
@@ -17,7 +19,7 @@ palindromeController.save = function(req, res) {
       res.render('../views/palindrome/create');
     } else {
       console.log("Successfully created a Palindrome.");
-      res.redirect('/palindrome/show');
+      res.redirect('/palindromes/show');
     }
   });
 };
@@ -28,7 +30,7 @@ palindromeController.list = function(req, res) {
     if (err) {
       console.log("Error:", err);
     } else {
-      res.render('../views/palindrome/index', {palindromes: palindromes});
+      res.render('../views/palindromes/index', {palindromes: palindromes});
     }
   });
 };
