@@ -16,10 +16,10 @@ palindromeController.save = function(req, res) {
   palindrome.save(function(err) {
     if(err){
       console.log(err);
-      res.render('../views/palindrome/create');
+      res.render('../views/palindromes/create');
     } else {
       console.log("Successfully created a Palindrome.");
-      res.redirect('/palindromes/show');
+      res.redirect('/palindromes');
     }
   });
 };

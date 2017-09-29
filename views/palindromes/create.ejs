@@ -1,26 +1,33 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <title>Create Palindrome</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <div class="container">
-      <h3><a href="/palindromes">Palindrome List</a></h3>
-      <h1>Create New Palindrome</h1>
-      <form action="/palindromes/save" method="post">
-        <table>
-          <tbody>
-            <tr>
-              <td>Palindrome:</td>
-              <td><input type="text" name="palindrome" /></td>
-            </tr>
-            <tr>
-              <td colspan="2"><input type="submit" value="Save" /></td>
-            </tr>
-          </tbody>
-        </table>
-      </form>
-    </div>
-  </body>
+<head>
+  <title>Create Employee</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<script type="text/javascript">
+function checkPalindrome() {
+  var str = document.getElementById("str").value;
+  var original = str.replace(/[\s"'.,-\/#!$%\^&*;:{}=\-_`~()\\\[\]@+|?><]/g,"").toLowerCase();
+  var reverse = original.split('').reverse().join('')
+  if(original == reverse) {
+    result.textContent = "Is a Palindrome!";
+    document.getElementById("save-button").style = "visible";
+  } else {
+    result.textContent = "Is not a palindrome.";
+    document.getElementById("save-button").style = "display:none;";
+
+  }
+}
+</script>
+<form action="/palindromes/save" method="post">
+Enter a String/Number: <input type="text" id="str" name="palindrome" /><br />
+<input type="button" value="Check" onclick="checkPalindrome();"/>
+<td colspan="2"><input id='save-button' style="display:none;" type="submit" value="Save" /></td>
+  <div>
+    <p id='result'></p>
+  </div>
+  </form>
+</body>
 </html>

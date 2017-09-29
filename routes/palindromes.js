@@ -6,7 +6,7 @@ var palindrome = require('../controllers/PalindromeController.js');
 router.get('/create', palindrome.create);
 
 // Save palindrome
-router.get('/save', palindrome.save);
+router.post('/save', palindrome.save);
 
 // Get all palindromes
 router.get('/', palindrome.list);
