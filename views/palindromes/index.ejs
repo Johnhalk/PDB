@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Palindrome List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/palindromes/create">Create Palindrome</a></h3>
+      <h1>Palindrome List</h1>
+      <% if(palindromes.length>0) { %>
+      <table>
+        <thead>
+          <tr>
+            <th>Palindrome</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <% for(var i=0; i<palindromes.length;i++) { %>
+            <tr>
+              <td><%= palindrome[i].palindrome%></td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+      <% } else { %>
+        <div>No employees found.</div>
+      <% } %>
+    </div>
+  </body>
+</html>

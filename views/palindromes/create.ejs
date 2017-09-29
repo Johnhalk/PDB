@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create Palindrome</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/palindrome">Palindrome List</a></h3>
+      <h1>Create New Palindrome</h1>
+      <form action="/palindromes/save" method="post">
+        <table>
+          <tbody>
+            <tr>
+              <td>Palindrome:</td>
+              <td><input type="text" name="palindrome" /></td>
+            </tr>
+            <tr>
+              <td colspan="2"><input type="submit" value="Save" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>
