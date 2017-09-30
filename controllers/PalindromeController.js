@@ -25,11 +25,11 @@ palindromeController.save = function(req, res) {
 };
 
 
-// List all palindrome
+// List all palindrome within the last 10mins
 palindromeController.list = function(req, res) {
   var endDate=new Date()
   var startDate=new Date(endDate-10*60*1000)
-  Palindrome.find({updated_at:{$gte: startDate,$lt: endDate}}).exec(function(err, palindromes) {
+  Palindrome.find({updated_at:{$gte: startDate,$lt: endDate}}).sort({_id:-1}).limit(10).exec(function(err, palindromes) {
     if (err) {
       console.log("Error:", err);
     } else {

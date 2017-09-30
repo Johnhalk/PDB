@@ -8,7 +8,7 @@
     <div class="container">
       <h3><a href="/palindromes/create">Create Palindrome</a></h3>
       <h1>Palindrome List</h1>
-      <% if(palindromes.length<10) { %>
+      <% if(palindromes.length>0) { %>
       <table>
         <tbody>
           <% for(var i=0; i<palindromes.length;i++) { %>
@@ -20,18 +20,6 @@
           <% } %>
         </tbody>
       </table>
-      <% } else if(10<palindromes.length) { %>
-        <table>
-          <tbody>
-            <% for(var i=palindromes.length - 10; i<palindromes.length;i++) { %>
-              <tr>
-                <td><%= palindromes[i].palindrome%></td>
-                <td><%= palindromes[i].updated_at%></td>
-                <td><%= Date()%></td>
-              </tr>
-            <% } %>
-          </tbody>
-        </table>
         <% } else { %>
         <div>No palindromes found.</div>
       <% } %>
