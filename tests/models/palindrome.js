@@ -18,7 +18,8 @@ describe('Palindromes', () =>{
       chai.request(app)
       .get('/')
       .end((err, res) => {
-        expect(res).to.have.status(200)
+        expect(res.statusCode).to.equal(200);
+        expect(res.type).to.equal('text/html');
         done()
       });
     });
@@ -29,6 +30,7 @@ describe('Palindromes', () =>{
       .get('/create')
       .end((err, res) => {
         expect(res).to.have.status(200)
+        expect(res.type).to.equal('text/html');
         done()
       });
     });
