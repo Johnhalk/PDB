@@ -20,18 +20,6 @@ var palindromes = require('./routes/palindromes');
 
 var app = express();
 
-function palindrome(str) {
- var re = /[^A-Za-z0-9]/;
- str = str.toLowerCase().replace(re, '');
- var len = str.length;
- for (var i = 0; i < len/2; i++) {
-   if (str[i] !== str[len - 1 - i]) {
-       return false;
-   }
- }
- return true;
-}
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

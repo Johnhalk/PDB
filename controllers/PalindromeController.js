@@ -24,9 +24,12 @@ palindromeController.save = function(req, res) {
   });
 };
 
+
 // List all palindrome
 palindromeController.list = function(req, res) {
-  Palindrome.find({}).exec(function(err, palindromes) {
+  var endDate=new Date()
+  var startDate=new Date(endDate-10*60*1000)
+  Palindrome.find({updated_at:{$gte: startDate,$lt: endDate}}).exec(function(err, palindromes) {
     if (err) {
       console.log("Error:", err);
     } else {

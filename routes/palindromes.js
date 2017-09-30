@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var palindrome = require('../controllers/PalindromeController.js');
 
+
 // Create palindrome
 router.get('/create', palindrome.create);
 
