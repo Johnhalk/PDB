@@ -9,7 +9,7 @@
 <script type="text/javascript">
 function checkPalindrome() {
   var str = document.getElementById("str").value;
-  var original = str.replace(/[\s"'.,-\/#!$%\^&*;:{}=\-_`~()\\\[\]@+|?><]/g,"").toLowerCase();
+  var original = str.replace(/@(["'])[\s"'.,-\/#!$%\^&*;:{}=\-_`~()\\\[\]@+|?><]/g,"").toLowerCase();
   var reverse = original.split('').reverse().join('')
   if(original == reverse) {
     result.textContent = "True; Is a Palindrome!";
