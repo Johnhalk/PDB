@@ -19,7 +19,7 @@ palindromeController.save = function(req, res) {
       res.render('../views/palindromes/create');
     } else {
       console.log("Successfully created a Palindrome.");
-      res.redirect('/palindromes');
+      res.redirect('/');
     }
   });
 };

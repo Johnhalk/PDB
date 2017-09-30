@@ -6,7 +6,7 @@
   </head>
   <body>
     <div class="container">
-      <h3><a href="/palindromes/create">Create Palindrome</a></h3>
+      <h3><a href="/create">Create Palindrome</a></h3>
       <h1>Palindrome List</h1>
       <% if(palindromes.length>0) { %>
       <table>
@@ -21,7 +21,7 @@
         </tbody>
       </table>
         <% } else { %>
-        <div>No palindromes found.</div>
+        <div id='no-palindromes'>No palindromes found.</div>
       <% } %>
     </div>
   </body>
