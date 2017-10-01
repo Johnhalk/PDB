@@ -14,14 +14,12 @@
           <% for(var i=0; i<palindromes.length;i++) { %>
             <tr>
               <td><%= palindromes[i].palindrome%></td>
-              <td><%= palindromes[i].updated_at%></td>
-              <td><%= Date()%></td>
             </tr>
           <% } %>
         </tbody>
       </table>
         <% } else { %>
-        <div id='no-palindromes'>No palindromes found.</div>
+        <div class='no-palindromes'>No palindromes found.</div>
       <% } %>
     </div>
   </body>

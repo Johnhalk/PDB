@@ -9,7 +9,7 @@
 <script type="text/javascript">
 function checkPalindrome() {
   var str = document.getElementById("str").value;
-  var original = str.replace(/@(["'])[\s"'.,-\/#!$%\^&*;:{}=\-_`~()\\\[\]@+|?><]/g,"").toLowerCase();
+  var original = str.replace(/[\s"'.,-\/#!$%\^&*;:{}=\-_`~()\\\[\]@+|?><]/g,"").toLowerCase();
   var reverse = original.split('').reverse().join('')
   if(original == reverse) {
     result.textContent = "True; Is a Palindrome!";
@@ -17,14 +17,13 @@ function checkPalindrome() {
   } else {
     result.textContent = "False; Is not a palindrome.";
     document.getElementById("save-button").style = "display:none;";
-
   }
 }
 </script>
 <h3><a href="/">Palindrome List</a></h3>
 <form action="/save" method="post">
-Enter a String/Number: <input type="text" id="str" name="palindrome" /><br />
-<input type="button" value="Check" onclick="checkPalindrome();"/>
+Enter a String/Number: <input id="str" type="text" name="palindrome" /><br />
+<input type="button" id="check" value="Check" onclick="checkPalindrome();"/>
 <td colspan="2"><input id='save-button' style="display:none;" type="submit" value="Save" /></td>
   <div>
     <p id='result'></p>
