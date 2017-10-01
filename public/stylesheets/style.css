@@ -1,8 +1,86 @@
 body {
-  padding: 50px;
+  padding: 30px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #555555;
 }
 
 a {
   color: #00B7FF;
+}
+
+.palindrome-title {
+  text-align: center;
+}
+
+.time-stamp {
+  text-align: center;
+}
+
+.palindrome {
+  border: solid 1px #AABF5C;
+  background-color: #00AE4D;
+  border-radius: 6px;
+  color: #FFFFFF;
+  margin: 10px 0;
+  padding: 10px 20px;
+}
+
+.container {
+  padding: 20px;
+  background-color: #efefef;
+  width: 450px;
+  border-radius: 6px;
+}
+.container h3 a {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #00AE4D;
+  border-radius: 6px;
+  color: #FFFFFF;
+}
+
+.container table {
+  width: 400px;
+}
+
+.container table tr td {
+  padding: 5px;
+}
+
+.container table tr td input, .container table tr td textarea {
+  border: solid 1px #dddddd;
+  padding: 5px 5px;
+  border-radius: 6px;
+  width: 100%;
+  color: #777777;
+}
+
+.container table tr td button {
+  border: solid 1px #AABF5C;
+  background-color: #00AE4D;
+  border-radius: 6px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 10px 0;
+  padding: 10px 10px;
+}
+
+.container form button {
+  border: solid 1px #CB2027;
+  background-color: #DD4B39;
+  border-radius: 6px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 10px 0;
+  padding: 10px 20px;
+}
+
+.container .list-table {
+  width: 360px;
+  border: solid 2px #DDDDDD;
+  border-spacing: 0;
+}
+
+.container .list-table th {
+  border-bottom: solid 2px #DDDDDD;
 }

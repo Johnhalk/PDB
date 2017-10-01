@@ -11,9 +11,12 @@
       <% if(palindromes.length>0) { %>
       <table>
         <tbody>
+          <td class="palindrome-title"> Palindrome:</td>
+          <td class="time-stamp"> Time: </td>
           <% for(var i=0; i<palindromes.length;i++) { %>
             <tr>
-              <td><%= palindromes[i].palindrome%></td>
+              <td><div class="palindrome"><%= palindromes[i].palindrome%></div></td>
+              <td><div class="time"><%= palindromes[i].updated_at.toLocaleTimeString()%></div></td>
             </tr>
           <% } %>
         </tbody>

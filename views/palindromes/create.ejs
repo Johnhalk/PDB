@@ -11,23 +11,25 @@ function checkPalindrome() {
   var str = document.getElementById("str").value;
   var original = str.replace(/[\s"'.,-\/#!$%\^&*;:{}=\-_`~()\\\[\]@+|?><]/g,"").toLowerCase();
   var reverse = original.split('').reverse().join('')
-  if(original == reverse) {
-    result.textContent = "True; Is a Palindrome!";
-    document.getElementById("save-button").style = "visible";
+    if(original == reverse && original != "") {
+      result.textContent = "True; Is a Palindrome!";
+      document.getElementById("save-button").style = "visible";
   } else {
-    result.textContent = "False; Is not a palindrome.";
-    document.getElementById("save-button").style = "display:none;";
+      result.textContent = "False; Is not a palindrome.";
+      document.getElementById("save-button").style = "display:none;";
   }
 }
 </script>
+<div class="container">
 <h3><a href="/">Palindrome List</a></h3>
-<form action="/save" method="post">
-Enter a String/Number: <input id="str" type="text" name="palindrome" /><br />
-<input type="button" id="check" value="Check" onclick="checkPalindrome();"/>
-<td colspan="2"><input id='save-button' style="display:none;" type="submit" value="Save" /></td>
+  <form action="/save" method="post">
+    <h3>Enter a word or a phrase to see if it's a palindrome:<h3> <input id="str" type="text" name="palindrome" /><br />
+    <input type="button" id="check" value="Check" onclick="checkPalindrome();"/>
+    <td colspan="2"><input id='save-button' style="display:none;" type="submit" value="Save" /></td>
   <div>
     <p id='result'></p>
   </div>
   </form>
+</div>
 </body>
 </html>
