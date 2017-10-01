@@ -2,7 +2,7 @@
 [Introduction](#introduction) | [Technologies](#technologies) | [Installation](#installation) | [Working Overview](#screenshots) |
 
 ## Introduction
-This is a web application built in Node and the Model-View-Controller web framework Express.
+This is a web application built in Node and the Express framework.
 
 ## User stories:
 
@@ -26,6 +26,7 @@ This app is built with:
 - Node
 - Express
 - MongoDB for Database
+- HTML and CSS for styling.
 
 Test with:
 
