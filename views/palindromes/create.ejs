@@ -7,7 +7,7 @@
 </head>
 <body>
 <script type="text/javascript">
-function checkPalindrome() {
+checkPalindrome = () => {
   var str = document.getElementById("str").value;
   var original = str.replace(/[\s"'.,-\/#!$%\^&*;:{}=\-_`~()\\\[\]@+|?><]/g,"").toLowerCase();
   var reverse = original.split('').reverse().join('')
