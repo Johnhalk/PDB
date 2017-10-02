@@ -8,7 +8,6 @@ palindromeController.create = (req, res) => {
   res.render('../views/palindromes/create');
 };
 
-
 //Save palindrome
 palindromeController.save =(req, res) => {
   var palindrome = new Palindrome(req.body);
@@ -23,7 +22,6 @@ palindromeController.save =(req, res) => {
     }
   });
 };
-
 
 // List all palindrome within the last 10mins
 palindromeController.list = (req, res) => {

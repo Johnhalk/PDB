@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "mocha tests/models tests/routes tests/views --reporter spec"
+    "test": "mocha tests/routes tests/views --reporter spec"
   },
   "dependencies": {
     "body-parser": "~1.17.1",
