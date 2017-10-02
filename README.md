@@ -40,6 +40,7 @@ Test with:
 - clone this repository
 - in project root directory run  ```npm install``` in the command line
 - start server with ```nodemon``` in the command line
+- Open ``` localhost:3000 ``` in the browser to view palindrome database 
 - run tests with ```npm test``` in the command line
 
 ## Testing
