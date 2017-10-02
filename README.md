@@ -3,6 +3,10 @@
 
 ## Introduction
 This is a web application built in Node and the Express framework.
+- Users can enter words or phrases and check if they are a palindrome
+- If input is not a valid palindrome they will be greeted with "False"
+- If input is valid the option to save the palindrome to database will be available.
+- Users can view a list of up to 10 valid palindromes recently entered within the last 10 mins.
 
 ## User stories:
 
@@ -40,7 +44,7 @@ Test with:
 - clone this repository
 - in project root directory run  ```npm install``` in the command line
 - start server with ```nodemon``` in the command line
-- Open ``` localhost:3000 ``` in the browser to view palindrome database 
+- Open ``` localhost:3000 ``` in the browser to view palindrome database
 - run tests with ```npm test``` in the command line
 
 ## Testing
