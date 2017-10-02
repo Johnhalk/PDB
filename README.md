@@ -82,4 +82,4 @@ It will not allow non-palindrome words or phrases to be passed through. The save
 
 This is achieved via the script within the create.ejs view.
 
-![Imgur](https://imgur.com/M4ZnWcm.png)
+![Imgur](https://imgur.com/wD3wdFY.png)
